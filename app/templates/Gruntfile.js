@@ -5,13 +5,15 @@ module.exports = function (grunt) {
         jasmine: {
             taskName: {
                 src: [
-                   'src/js/**/*.js',
-                   '!src/spec/*spec.js'
+                   '*.js',
+                   '!tests/spec/*spec.js',
+                   'Gruntfile.js'
                 ],
                 options: {
-                    specs: 'src/js/spec/*.js',
-                    template: 'src/js/spec/esri_amd.html',
+                    specs: 'tests/spec/*.js',
+                    template: 'tests/esri_amd.html',
                     keepRunner: true,
+                    outfile: 'tests/_SpecRunner.html',
                     vendor: []
                 }
             }

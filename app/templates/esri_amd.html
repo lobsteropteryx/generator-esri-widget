@@ -22,11 +22,8 @@
     var dojoConfig = {
         parseOnLoad: false,
         packages: [
-            { name: "src", location: location.pathname.replace(/[^\/]+$/, '') + 'src' },
-            { name: "js", location: location.pathname.replace(/[^\/]+$/, '') + 'src/js' },
-            { name: "app", location: location.pathname.replace(/[^\/]+$/, '') + 'src/js/app' },
-            { name: 'jasmine', location: location.pathname.replace(/\/[^\/]+$/, "/") + "src/js/vendor/jasmine-2.0.0-rc5" },
-            { name: 'spec', location: location.pathname.replace(/\/[^\/]+$/, "/") + "src/js/spec" }
+            { name: "src", location: location.pathname.replace(/[^\/]+$/, '/') },
+            { name: 'spec', location: location.pathname.replace(/\/[^\/]+$/, "/") + "spec" }
         ]
     }
 </script>
@@ -55,11 +52,5 @@
 </head>
 <body>
     <div id="viewNode" style="display: none;"></div>
-
-    <script type="text/javascript"
-            data-cover-only="src/js/app/"
-            data-cover-never="['src/js/spec/','src/js/vendor/']"
-            src="src/js/vendor/blanket.min.js"></script>
-    <script type="text/javascript" src="src/js/vendor/jasmine-blanket.js"></script>
 </body>
 </html>

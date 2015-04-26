@@ -1,6 +1,5 @@
 define([
-  '<%= path %><%= widgetName %>',
-
+  '/<%= widgetName %>.js',
   'dojo/dom-construct'
 ], function(
   WidgetUnderTest,
@@ -26,7 +25,7 @@ define([
 
     describe('Sanity', function() {
       it('should create a <%= widgetName %>', function() {
-        expect(widget).to.be.a(WidgetUnderTest);
+        expect(widget).toEqual(jasmine.any(WidgetUnderTest));
       });
     });
   });
