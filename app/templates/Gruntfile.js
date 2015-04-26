@@ -14,6 +14,7 @@ module.exports = function (grunt) {
                     template: 'tests/esri_amd.html',
                     keepRunner: true,
                     outfile: 'tests/_SpecRunner.html',
+                    host: 'http://127.0.0.1:8000/',
                     vendor: []
                 }
             }
