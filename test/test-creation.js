@@ -32,58 +32,16 @@ describe('esri-widget generator', function() {
     }.bind(this));
   });
 
-  it('creates expected files and defaults to no map', function(done) {
+  it('creates expected files ', function(done) {
 
     helpers.mockPrompt(this.app, {
       'widgetName': 'test',
-      'description': 'test description',
-      'path': 'app',
       'widgetsInTemplate': true
     });
 
     this.app.options['skip-install'] = true;
     this.app.run({}, function() {
       helpers.assertFile(expectedFiles);
-      // by default, don't include a map in the test page
-      helpers.assertNoFileContent('app/tests/testTest.html', /map\W?=/);
-      done();
-    });
-  });
-
-  it('creates an empty map with new Map()', function(done) {
-
-    helpers.mockPrompt(this.app, {
-      'widgetName': 'test',
-      'description': 'test description',
-      'path': 'app',
-      'widgetsInTemplate': true,
-      'testPageMap': 'Empty map - i.e. new Map()'
-    });
-
-    this.app.options['skip-install'] = true;
-    this.app.run({}, function() {
-      helpers.assertFile(expectedFiles);
-      // create empty map in the test page
-      helpers.assertFileContent('app/tests/testTest.html', /map\W?=\W?new Map\(/);
-      done();
-    });
-  });
-
-  it('creates a map from a web map', function(done) {
-
-    helpers.mockPrompt(this.app, {
-      'widgetName': 'test',
-      'description': 'test description',
-      'path': 'app',
-      'widgetsInTemplate': true,
-      'testPageMap': 'Web map - i.e. arcgisUtils.createMap()'
-    });
-
-    this.app.options['skip-install'] = true;
-    this.app.run({}, function() {
-      helpers.assertFile(expectedFiles);
-      // create empty map in the test page
-      helpers.assertFileContent('app/tests/testTest.html', /map\W?=\W?response\.map;/);
       done();
     });
   });

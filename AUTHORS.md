@@ -1,1 +1,1 @@
-Tom Wayson <twayson@esri.com> (https://github.com/tomwayson)
+Ian Firkin <ian.firkin@gmail.com> (https://github.com/lobsteroptyerx)

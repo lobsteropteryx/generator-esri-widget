@@ -1,1 +1,1 @@
-We welcome contributions from anyone and everyone. Please see the Esri [guidelines for contributing](https://github.com/esri/contributing).
+We welcome contributions from anyone and everyone.
