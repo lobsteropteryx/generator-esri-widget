@@ -4,7 +4,7 @@
   "description": "Yeoman generator for creating Esri widgets, customize for GIS, inc use",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "",
+  "repository": "tomwayson/generator-esri-widget",
   "author": {
     "name": "Ian Firkin",
     "email": "ian.firkin@gmail.com",

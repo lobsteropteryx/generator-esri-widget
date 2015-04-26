@@ -10,7 +10,7 @@ var DojoWidgetGenerator = yeoman.generators.Base.extend({
     console.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    console.log(chalk.magenta('Welcome to Ian's esri-widget generator.'));
+    console.log(chalk.magenta('Welcome to the GISi esri-widget generator.'));
     console.log(chalk.green('It is best to run this widget from the parent folder of your package.'));
     console.log(chalk.green('So like the', chalk.underline.bgWhite('/src') + ' folder'));
 
@@ -45,6 +45,9 @@ var DojoWidgetGenerator = yeoman.generators.Base.extend({
 
   app: function() {
     this.copy('tests.css', this.path + 'tests/tests.css');
+    this.copy('esri_amd.html', this.path + 'tests/esri_amd.html');
+    this.copy('Gruntfile.js', this.path + 'Gruntfile.js');
+    this.template('_package.json', this.path + 'package.json');
     this.template('_widget.js', this.path + this.widgetName + '.js');
     this.template('_template.html', this.path + 'templates/' + this.widgetName + '.html');
     this.template('_test_page.html', this.path + 'tests/' + this.widgetName + 'Test.html');

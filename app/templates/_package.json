@@ -1,0 +1,12 @@
+{
+  "name": "<%= widgetName %>",
+  "version": "0.0.1",
+  "description": "",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jasmine": "~0.8.1"
+  },
+  "author": "",
+  "license": ""
+}
